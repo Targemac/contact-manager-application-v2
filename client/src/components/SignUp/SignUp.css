@@ -1,0 +1,44 @@
+.signup-wrapper {
+  background-color: #d8e6f5;
+  color: #4f4f4f;
+  padding: 2rem 0;
+  font-size: 18px;
+}
+
+.signup-form {
+  display: grid;
+  gap: 1rem;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.signup-form a {
+  color: #4f4f4f;
+  text-decoration: none;
+}
+
+.signup-form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.signup-form-row input {
+  padding: 8px 12px;
+  border: none;
+  font-size: 18px;
+}
+
+.signup-form-row button {
+  padding: 8px 12px;
+  background-color: #4f4f4f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
