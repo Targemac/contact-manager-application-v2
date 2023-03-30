@@ -3,7 +3,7 @@
 }
 /* ------------------------ */
 .profile_col_1 {
-  background-color: rgba(172, 224, 235, 0.837);
+  /* background-color: rgba(172, 224, 235, 0.837); */
   width: 20%;
   padding: 1rem;
 }
@@ -48,7 +48,7 @@
 }
 /* ------------------------ */
 .profile_col_2 {
-  background-color: rgba(249, 179, 179, 0.844);
+  /* background-color: rgba(249, 179, 179, 0.844); */
   flex-grow: 1;
 }
 
@@ -140,7 +140,7 @@
 .contact_box .contact_box_action_grp:nth-child(4) button {
   color: white;
   border: none;
-  padding: 0.5rem .8rem;
+  padding: 0.5rem 0.8rem;
 }
 .contact_box .contact_box_action_grp:nth-child(4) button:nth-child(1) {
   background-color: #6f6f6f;
