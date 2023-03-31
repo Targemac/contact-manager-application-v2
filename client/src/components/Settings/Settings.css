@@ -1,0 +1,32 @@
+.settings_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  width: 80%;
+  margin: 0 auto;
+  place-items: center;
+}
+
+.settings_wrapper div[class$="row_1"] {
+  font-size: 2rem;
+  text-align: center;
+  color: #6f6f6f;
+}
+
+.settings_wrapper div[class$="row_2"] {
+  font-size: 8rem;
+  color: #8aa8f4;
+  text-align: center;
+}
+
+.settings_wrapper div[class$="row_3"] {
+  display: grid;
+}
+.settings_wrapper div[class$="row_3"] a {
+  background-color: #6f6f6f;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-align: center;
+}

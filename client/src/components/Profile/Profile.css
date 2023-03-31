@@ -142,8 +142,11 @@
   border: none;
   padding: 0.5rem 0.8rem;
 }
-.contact_box .contact_box_action_grp:nth-child(4) button:nth-child(1) {
+.contact_box .contact_box_action_grp:nth-child(4) a:nth-child(1) {
   background-color: #6f6f6f;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
 }
 .contact_box .contact_box_action_grp:nth-child(4) button:nth-child(2) {
   background-color: indianred;

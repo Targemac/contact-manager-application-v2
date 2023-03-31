@@ -5,7 +5,7 @@ import Header from "../Partials/Header/Header";
 import Footer from "../Partials/Footer/Footer";
 import { Link } from "react-router-dom";
 
-const AddContact = () => {
+const EditContact = () => {
   return (
     <div>
       <Header />
@@ -14,7 +14,7 @@ const AddContact = () => {
         <form action="" method="post">
           <div className="page_row_1">
             <div className="page_row_1_a">
-              <FaUserPlus /> Add Contact
+              <FaUserPlus /> Edit Contact
             </div>
             <div className="page_row_1_b">
               <Link to="/profile">
@@ -38,7 +38,7 @@ const AddContact = () => {
             <Link to="/profile" className="cancel_btn">
               Cancel
             </Link>
-            <button className="create_btn">Create</button>
+            <button className="create_btn">Update</button>
             {/* </div> */}
           </div>
         </form>
@@ -49,4 +49,4 @@ const AddContact = () => {
   );
 };
 
-export default AddContact;
+export default EditContact;
