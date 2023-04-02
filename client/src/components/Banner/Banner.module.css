@@ -1,0 +1,129 @@
+.main_wrapper {
+  /* border: 0.5px solid grey; */
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.headline_1 {
+  font-size: 4rem;
+  font-family: "impact";
+  /* font-weight: bold; */
+  color: #4f4f4f;
+  /* padding: 1rem 0; */
+  /* outline: 1px solid red; */
+  /* text-shadow: 1px 1px 1px #6f6f6f; */
+}
+
+.headline_2 {
+  font-size: 2rem;
+  font-family: "time new roman";
+  color: white;
+  font-style: italic;
+  border-top: 0.5px solid #4f4f4f;
+  color: #4f4f4f;
+  padding: 1rem;
+  display: flex;
+}
+
+.banner_col_grp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.banner_col_1 {
+  display: grid;
+  min-width: 400px;
+  flex-grow: 1;
+  gap: 2rem;
+  /* background-color: aquamarine; */
+}
+
+.btn_grp {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn_grp a:nth-child(1) {
+  color: white;
+  background-color: #4f4f4f;
+  padding: 8px 12px;
+  align-self: flex-start;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn_grp a:nth-child(2) {
+  color: #4f4f4f;
+  border: 0.5px solid;
+  padding: 8px 12px;
+  align-self: flex-start;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.headline_3 {
+  /* font-weight: bold; */
+  text-transform: capitalize;
+  color: #4f4f4f;
+  font-size: 1.5rem;
+}
+
+.statistics_grp {
+  display: flex;
+  justify-content: space-between;
+}
+.statistics_grp_sub {
+  /* display: grid; */
+  max-width: 15ch;
+}
+
+.statistics_grp_sub_head {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.statistics_grp_sub_body {
+  color: #6f6f6f;
+  text-transform: capitalize;
+}
+
+.banner_col_2 {
+  display: flex;
+  min-width: 400px;
+  flex-grow: 1;
+  gap: 2rem;
+  justify-content: space-evenly;
+  /* background-color: rgb(220, 185, 252); */
+  /* border: .5px solid rgb(220, 185, 252); */
+  /* padding:1rem ; */
+  /* border-radius: 5px; */
+}
+
+.banner_col_2_img {
+  /* background-color: blueviolet; */
+}
+
+.banner_col_2_socials {
+  display: grid;
+  border: 0.5px solid #6f6f6f;
+  border-radius: 25px;
+  padding: 1rem;
+  /* gap: 1rem; */
+  align-content: space-between;
+}
+
+.banner_col_2_socials a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #4f4f4f;
+}
+.banner_col_2_socials a:hover {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #638cf4;
+}
