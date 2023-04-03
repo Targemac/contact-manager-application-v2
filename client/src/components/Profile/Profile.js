@@ -14,7 +14,11 @@ import {
 import profilePhoto from "../../assets/charles targema (2).jpg";
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import { ContactContext } from "../../Context/ContactContext";
+
 const Profile = () => {
+  const { contacts, numberOfContacts } = useContext(ContactContext);
   return (
     <React.Fragment>
       <Header />
@@ -42,7 +46,10 @@ const Profile = () => {
                 <input type="search" name="" id="" placeholder="Find Contact" />
               </div>
             </form>
-            <div className="number_of_contact_box">108 Contacts</div>
+            <div className="number_of_contact_box">
+              {/* {contacts.length} */}
+              {numberOfContacts} &nbsp; Contacts
+            </div>
             <div className="add_contact_box">
               <Link to="/profile/contact/add">
                 <FaPlusSquare /> Add Contact
@@ -50,147 +57,37 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile_col_2_sub_2">
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">
-                  <FaEnvelope /> Send Email
-                </a>
-              </div>
-              <div className="contact_box_item">
-                <FaPhone />
-                08097866451
-              </div>
-              <div className="contact_box_action_grp">
-                <Link to="/profile/contact/edit" className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </Link>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
-            <div className="contact_box">
-              <div className="contact_box_item">Targema Charles</div>
-              <div className="contact_box_item">
-                <a href="mailto:targemac@gmail.com">targemac@gmail.com</a>
-              </div>
-              <div className="contact_box_item">08097866451</div>
-              <div className="contact_box_action_grp">
-                <button className="edit_btn">
-                  <FaEdit />
-                  Edit
-                </button>
-                <button className="delete_btn">
-                  <FaTrash />
-                  Delete
-                </button>
-              </div>
-            </div>
+            {contacts.map((contact, index, array) => {
+              return (
+                <div key={contact.id} className="contact_box">
+                  <div className="contact_box_item">
+                    {contact.last_name.toUpperCase()} {contact.first_name}
+                  </div>
+                  <div className="contact_box_item">
+                    <a href={`mailto:` + contact.email}>
+                      <FaEnvelope /> Send Email
+                    </a>
+                  </div>
+                  <div className="contact_box_item">
+                    <FaPhone />
+                    {contact.phone}
+                  </div>
+                  <div className="contact_box_action_grp">
+                    <Link
+                      to={`/profile/contact/edit/` + contact.id}
+                      className="edit_btn"
+                    >
+                      <FaEdit />
+                      Edit
+                    </Link>
+                    <button className="delete_btn">
+                      <FaTrash />
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

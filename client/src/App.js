@@ -12,26 +12,31 @@ import ChangePassword from "./components/Profile/ChangePassword";
 import DeleteAccount from "./components/Profile/DeleteAccount";
 import EditProfile from "./components/Profile/EditProfile";
 
+// importing context providers below
+import { ContactProvider } from "./Context/ContactContext";
+
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+    <ContactProvider>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/profile/contact/add" element={<AddContact />} />
-        <Route path="/profile/contact/edit" element={<EditContact />} />
-        <Route path="/profile/settings" element={<Settings />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/contact/add" element={<AddContact />} />
+          <Route path="/profile/contact/edit/:id" element={<EditContact />} />
+          <Route path="/profile/settings" element={<Settings />} />
 
-        <Route path="/profile/password" element={<ChangePassword />} />
-        <Route path="/profile/delete-account" element={<DeleteAccount />} />
-        <Route path="/profile/edit" element={<EditProfile />} />
+          <Route path="/profile/password" element={<ChangePassword />} />
+          <Route path="/profile/delete-account" element={<DeleteAccount />} />
+          <Route path="/profile/edit" element={<EditProfile />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </ContactProvider>
   );
 }
 

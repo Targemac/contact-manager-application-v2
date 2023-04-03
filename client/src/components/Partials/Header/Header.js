@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 // import headStyle from "./Header.Modules.css";
 import logo from "../../../assets/CMA-v2.svg";
-import { FaBars, FaUserShield, FaUserPlus } from "react-icons/fa";
+import {
+  FaBars,
+  FaUserShield,
+  FaUserPlus,
+  FaRegAddressBook,
+} from "react-icons/fa";
+import { ContactContext } from "../../../Context/ContactContext";
 
 const Header = () => {
+  const { contacts, numberOfContacts } = useContext(ContactContext);
   return (
-    <nav className="main-navbar" >
+    <nav className="main-navbar">
       <div className="logo-box">
         <Link to="/">
           <img src={logo} alt="CMA Logo" />
@@ -32,6 +39,9 @@ const Header = () => {
             SignUp
             <FaUserPlus />
           </Link>
+          <button disabled>
+            <FaRegAddressBook /> {numberOfContacts}
+          </button>
         </div>
       </div>
     </nav>

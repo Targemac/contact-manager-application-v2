@@ -108,6 +108,7 @@
 
 .profile_col_2_sub_2 .contact_box {
   display: grid;
+  row-gap: .5rem;
 }
 
 .contact_box .contact_box_item:nth-child(1) {
