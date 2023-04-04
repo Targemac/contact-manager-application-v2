@@ -10,7 +10,7 @@ const SignUp = () => {
       <Header />
       {/* start of signup wrapper */}
       <div className="signup-wrapper">
-        <form action="" method="post">
+        <form action="" method="POST">
           <div className="signup-form">
             <div className="signup-form-row form-title">SignUp</div>
 
