@@ -15,7 +15,7 @@ const SignUp = () => {
             <div className="signup-form-row form-title">SignUp</div>
 
             <div className="signup-form-row">
-              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="First name" name="" />
               <input type="text" placeholder="Last name" />
             </div>
 

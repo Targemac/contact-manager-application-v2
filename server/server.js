@@ -2,7 +2,9 @@ const dotenv = require("dotenv").config();
 const express = require("express");
 const usersRoute = require("./routes/usersRoute");
 const contactsRoute = require("./routes/contactRoute");
+const db_connection = require("./config/dbConnect");
 const app = express();
+db_connection();
 
 const PORT = process.env.PORT || 5000;
 
