@@ -5,24 +5,24 @@ var userSchema = new mongoose.Schema(
   {
     first_name: {
       type: String,
-      required: [true, "Please provide first name"],
+      required: true,
     },
     last_name: {
       type: String,
-      required: [true, "Please provide last name"],
+      required: true,
     },
     email: {
       type: String,
-      required: [true, "Please provide email"],
+      required: true,
       unique: true,
     },
     phone: {
       type: String,
-      required: [true, "Please provide phone number"],
+      required: true,
     },
     password: {
       type: String,
-      required: [true, "Please provide password"],
+      required: true,
     },
     last_seen: {
       type: String,
