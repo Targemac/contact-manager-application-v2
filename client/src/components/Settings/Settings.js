@@ -2,8 +2,13 @@ import React from "react";
 import Footer from "../Partials/Footer/Footer";
 import Header from "../Partials/Header/Header";
 import "./Settings.css";
-import { Link } from "react-router-dom";
-import { FaUserEdit, FaUserShield, FaUserLock } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
+import {
+  FaUserEdit,
+  FaUserShield,
+  FaUserLock,
+  FaArrowLeft,
+} from "react-icons/fa";
 
 const Settings = () => {
   return (
@@ -40,6 +45,14 @@ const Settings = () => {
             <Link to="/profile/delete-account">Delete Account</Link>
           </div>
         </div>
+      </section>
+      <section className="settings_wrapper">
+        <span>
+          <NavLink className="back_to_profile_btn" to="/profile">
+          <FaArrowLeft /> &nbsp;
+            Back to Profile page
+          </NavLink>
+        </span>
       </section>
       {/* end of settings */}
       <Footer />

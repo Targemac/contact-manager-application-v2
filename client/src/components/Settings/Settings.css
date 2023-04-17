@@ -29,4 +29,13 @@
   padding: 8px 12px;
   text-decoration: none;
   text-align: center;
+  border-radius: 5px;
+}
+
+.back_to_profile_btn {
+  background-color: #6f6f6f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
 }

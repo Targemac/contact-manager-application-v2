@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
 import Header from "../Partials/Header/Header";
 import Footer from "../Partials/Footer/Footer";
 
 const SignUp = () => {
+  const [state, setState] = useState("");
   return (
     <React.Fragment>
       <Header />

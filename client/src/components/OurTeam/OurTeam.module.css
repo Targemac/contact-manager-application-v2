@@ -1,0 +1,42 @@
+.wrapper {
+  /* border: 0.5px solid grey; */
+  padding: 4rem;
+  background-color: rgb(230, 229, 229);
+  color: #4f4f4f;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 2rem 0;
+}
+
+.team_grp {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.team_member {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  gap: .5rem;
+}
+
+.team_member img {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.memeber_name {
+  font-weight: bold;
+}
+
+.memeber_role {
+  font-style: italic;
+  color: #4f4f4f;
+}
