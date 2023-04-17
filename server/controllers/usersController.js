@@ -76,7 +76,7 @@ const loginUser = async (req, res) => {
     // if loggin details are correct
 
     // create a token
-    const token = jwt.sign({ user: foundEmail._id }, process.env.LOGIN_SECRET, {
+    const token = jwt.sign({ id: foundEmail._id }, process.env.LOGIN_SECRET, {
       expiresIn: "1d",
     });
 
@@ -100,6 +100,12 @@ const loginUser = async (req, res) => {
 // @privacy: protected
 const getAllUsers = async (req, res) => {
   try {
+    // if req.user.id is absent, return
+    if (!req.user.id) {
+      res.status(401).send({ message: "Unauthorized Access!" });
+      return;
+    }
+
     // fetch all users from db
     const allUsers = await UserModel.find();
 

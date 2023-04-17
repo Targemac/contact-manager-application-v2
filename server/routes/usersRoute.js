@@ -11,6 +11,8 @@ const {
   deleteSingleUser,
 } = require("../controllers/usersController");
 
+const isAuth = require("../middlewares/isAuth");
+
 // @define: register user
 // @route: /api/users/register
 // @privacy: public
@@ -24,21 +26,21 @@ usersRoute.post("/login", loginUser);
 // @define: get all users
 // @route: /api/users
 // @privacy: protected
-usersRoute.get("/", getAllUsers);
+usersRoute.get("/", isAuth, getAllUsers);
 
-// @define: get single user
+// @define: get single user profile
 // @route: /api/users/:id
 // @privacy: protected
-usersRoute.get("/:id", getSingleUser);
+usersRoute.get("/:id", isAuth, getSingleUser);
 
 // @define: update single user
 // @route: /api/users/:id
 // @privacy: protected
-usersRoute.put("/:id", updateSingleUser);
+usersRoute.put("/:id", isAuth, updateSingleUser);
 
 // @define: delete single user
 // @route: /api/users/:id
 // @privacy: protected
-usersRoute.delete("/:id", deleteSingleUser);
+usersRoute.delete("/:id", isAuth, deleteSingleUser);
 
 module.exports = usersRoute;

@@ -7,35 +7,36 @@ const {
   deleteContact,
 } = require("../controllers/contactController");
 const contactsRoute = express.Router();
+const isAuth = require("../middlewares/isAuth");
 
 // @ description : get all contacts
 // @ route :  /api/contacts/
 // @ privacy : protected
 // @ method : GET
-contactsRoute.get("/", getAllContacts);
+contactsRoute.get("/", isAuth, getAllContacts);
 
 // @ description : get single contact
 // @ route :  /api/contacts/:id
 // @ privacy : protected
 // @ method : GET
-contactsRoute.get("/:id", getSingleContact);
+contactsRoute.get("/:id", isAuth, getSingleContact);
 
 // @ description : add contact
 // @ route :  /api/contacts
 // @ privacy : protected
 // @ method : POST
-contactsRoute.post("/", addContact);
+contactsRoute.post("/", isAuth, addContact);
 
 // @ description : edit contact
 // @ route :  /api/contacts/:id
 // @ privacy : protected
 // @ method : PUT
-contactsRoute.put("/:id", editContact);
+contactsRoute.put("/:id", isAuth, editContact);
 
 // @ description : delete contact
 // @ route :  /api/contacts/:id
 // @ privacy : protected
 // @ method : DELETE
-contactsRoute.delete("/:id", deleteContact);
+contactsRoute.delete("/:id", isAuth, deleteContact);
 
 module.exports = contactsRoute;
