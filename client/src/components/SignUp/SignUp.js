@@ -41,11 +41,10 @@ const SignUp = () => {
 
     // send details to backend
     try {
-      const BACKEND_URL = "http://localhost:5000/api/users";
+      const BACKEND_URL = "http://localhost:5000/api/users/register";
 
       const response = await axios.post(BACKEND_URL, userDetails);
       console.log(response);
-
     } catch (error) {
       setError(error.message);
     }
